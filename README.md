@@ -5,7 +5,7 @@
 [ ] Wallpaper Masthead Logo
 [ ] Color palate
 [ ] Demo Mixtape
-[ ] Logo typeface
+[ ] Logo typeface -
 [ ] Typography Typeface
 [ ] Mission Statement
 [ ] Elevator Pitch
@@ -17,8 +17,12 @@ Components:
 [ ] NavBar/Bottom Nav for mobile (hamburger menu?)
 [ ] Masthead/Carousel
 [ ] Radio Blog Page
-[ ] About Section
+[√] About/Bio Blurb
 [ ] Show Section
 [ ] Record Section
 [ ] Logo Badge (insta/bandcamp/mixcloud/email)
-[ ] Twitch Stream
+[√] Twitch Stream
+
+
+Todo:
+[ ] Fix Twitch Stream Branding

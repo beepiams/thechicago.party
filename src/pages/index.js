@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
+import Twitch from '../components/Twitch'
 
 class BlogIndex extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class BlogIndex extends React.Component {
       <div>
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
         <Bio />
+        <Twitch />
         {posts.map(post => {
           if (post.node.path !== '/404/') {
             const title = get(post, 'node.frontmatter.title') || post.node.path
