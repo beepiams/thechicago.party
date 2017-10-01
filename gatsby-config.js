@@ -41,9 +41,19 @@ module.exports = {
         trackingId: `UA-107290253-1`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Roboto`,
+          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+        ]
+      }
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-styled-components`,
+
   ],
 }

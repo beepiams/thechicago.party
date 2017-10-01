@@ -2,9 +2,33 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-
+import styled, { ThemeProvider } from 'styled-components'
 import Bio from '../components/Bio'
 import Twitch from '../components/Twitch'
+
+const Button = styled.button`
+	font-size: 1em;
+	margin: 1em;
+	padding: 0.25em 1em;
+	border-radius: 3px;
+
+	/* Color the border and text with theme.main */
+	color: ${props => props.theme.main};
+	border: 2px solid ${props => props.theme.main};
+`;
+
+// We're passing a default theme for Buttons that aren't wrapped in the ThemeProvider
+Button.defaultProps = {
+	theme: {
+		main: 'palevioletred'
+	}
+}
+
+// Define what props.theme will look like
+const theme = {
+	main: 'mediumseagreen'
+};
+
 
 class BlogIndex extends React.Component {
   render() {
@@ -13,9 +37,14 @@ class BlogIndex extends React.Component {
 
     return (
       <div>
+
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
+
+
         <Bio />
         <Twitch />
+
+
         {posts.map(post => {
           if (post.node.path !== '/404/') {
             const title = get(post, 'node.frontmatter.title') || post.node.path
@@ -42,6 +71,11 @@ BlogIndex.propTypes = {
 }
 
 export default BlogIndex
+
+///styles
+
+
+///
 
 export const pageQuery = graphql`
   query IndexQuery {

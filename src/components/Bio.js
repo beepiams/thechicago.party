@@ -24,6 +24,7 @@ class Bio extends React.Component {
 }
 
 const Title = styled.h1`
+  font-family: 'Roboto', sans-serif;
 	font-size: 1.5em;
 	text-align: center;
 	color: palevioletred;
